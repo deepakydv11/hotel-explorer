@@ -1,0 +1,29 @@
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-5);
+  padding-bottom: var(--space-6);
+}
+
+.state-panel {
+  text-align: center;
+  padding: var(--space-8) var(--space-5);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper-alt);
+  margin-bottom: var(--space-6);
+}
+
+.state-panel h3 {
+  margin-bottom: var(--space-2);
+}
+
+.state-panel p {
+  color: var(--ink-soft);
+  margin-bottom: var(--space-4);
+}
+
+.state-panel--error {
+  border-color: var(--rust);
+  background: #f7e6de;
+}

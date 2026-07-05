@@ -1,0 +1,211 @@
+.ticket {
+  --stub-width: 200px;
+  display: grid;
+  grid-template-columns: var(--stub-width) auto 1fr;
+  align-items: stretch;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  border: 1px solid var(--line);
+  position: relative;
+  margin-top: calc(var(--space-8) * -1);
+  z-index: 2;
+}
+
+.ticket__stub {
+  grid-column: 1;
+  background: var(--jade);
+  color: var(--white);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  padding: var(--space-5) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  justify-content: center;
+  min-width: 0;
+}
+
+.ticket__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.ticket__stub .ticket__eyebrow {
+  color: var(--paper);
+  opacity: 0.75;
+}
+
+.ticket__select--big {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0;
+  appearance: none;
+}
+
+.ticket__select--big option {
+  color: var(--ink);
+}
+
+.ticket__code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--brass);
+  margin: 0;
+}
+
+.ticket__perforation {
+  grid-column: 2;
+  position: relative;
+  width: 1px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--line) 0,
+    var(--line) 6px,
+    transparent 6px,
+    transparent 14px
+  );
+}
+
+.ticket__hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.ticket__body {
+  grid-column: 3;
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-4);
+}
+
+.ticket__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 130px;
+}
+
+.ticket__field--grow {
+  flex: 1 1 220px;
+}
+
+.ticket__input,
+.ticket__select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.7rem;
+  background: var(--paper);
+}
+
+.ticket__input:focus,
+.ticket__select:focus {
+  border-color: var(--jade);
+}
+
+.ticket__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.3rem;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--brass);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: var(--brass-dark);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border-color: var(--line);
+}
+
+.btn--ghost:hover {
+  border-color: var(--ink-soft);
+}
+
+.ticket__result-line {
+  grid-column: 1 / -1;
+  border-top: 1px dashed var(--line);
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+@media (max-width: 860px) {
+  .ticket {
+    grid-template-columns: 1fr;
+    margin-top: calc(var(--space-6) * -1);
+  }
+
+  .ticket__stub {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .ticket__perforation {
+    width: auto;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--line) 0,
+      var(--line) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  }
+
+  .ticket__hole {
+    top: 0;
+  }
+
+  .ticket__actions {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+  }
+}

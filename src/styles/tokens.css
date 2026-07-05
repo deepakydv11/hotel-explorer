@@ -1,0 +1,39 @@
+:root {
+  /* ---- Color: "travel-desk" palette, sand paper + brass + jade ---- */
+  --ink: #1c2541;
+  --ink-soft: #3c4566;
+  --paper: #f1ecdd;
+  --paper-alt: #e8e0cb;
+  --paper-deep: #ddd3b3;
+  --brass: #c08a2e;
+  --brass-dark: #9c6f22;
+  --jade: #2f6f62;
+  --jade-dark: #234f45;
+  --rust: #b4472a;
+  --line: #c9bfa0;
+  --white: #fffdf7;
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* ---- Scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 1px 2px rgba(28, 37, 65, 0.06), 0 8px 24px rgba(28, 37, 65, 0.08);
+  --shadow-lift: 0 4px 8px rgba(28, 37, 65, 0.1), 0 16px 40px rgba(28, 37, 65, 0.14);
+
+  color-scheme: light;
+}
